@@ -1,0 +1,33 @@
+{
+  "summary": "Botanical Canvas portfolio MVP verified end-to-end. Backend /api/ and /api/chat/stream both return 200 with correct content and SSE format. Frontend renders all sections (Hero, About, Projects x5, Skills, Playground, Contact) with correct data-testids. Nav smooth scroll works, playground drag+reset works, mailto link correct, chatbot opens/streams a real LLM response/closes. LLM budget note in request was outdated — endpoint actually returns full assistant response, no [ERROR] observed.",
+  "tested_scope": ["frontend", "backend", "integration"],
+  "passed": [
+    "GET /api/ → 200 {message: 'Botanical Canvas API'}",
+    "POST /api/chat/stream → 200 text/event-stream, streams tokens then [DONE]",
+    "Home loads with brand 'Botanical/Canvas' and sticky main-nav",
+    "Hero heading 'Cultivating digital experiences that bloom.' + both CTAs visible",
+    "Nav links (about/projects/skills/playground/contact) scroll to sections",
+    "About tabs design/prototype/inspect present",
+    "Projects section renders project-card-1..5",
+    "Skills section renders",
+    "Playground: item-1 drag moves it >20px; reset restores original position",
+    "Contact mailto href = 'mailto:hello@yourname.design?subject=Hello from your portfolio'",
+    "Chatbot trigger opens panel; send Enter streams assistant reply; close button hides panel",
+    "No console errors on initial load"
+  ],
+  "failed": [
+    {
+      "area": "frontend/z-index (minor UX)",
+      "issue": "Emergent 'Made with Emergent' badge (#emergent-badge) overlaps the chatbot-trigger button in the bottom-right corner and intercepts pointer events, blocking normal clicks on the Critique AI button.",
+      "evidence": "Playwright click on [data-testid=\"chatbot-trigger\"] failed with '<a id=\"emergent-badge\"> intercepts pointer events'. Force-click succeeded and chat worked normally afterwards.",
+      "priority": "MEDIUM"
+    }
+  ],
+  "action_items": [
+    "Consider nudging the chatbot-trigger button up/left (e.g., bottom-20 or right-24 on md+) or lowering its z-index conflict so the Emergent badge does not overlay it in the preview environment. This is a real user-facing overlap in the bottom-right corner."
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100% (with 1 medium UX overlap)"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "Emergent LLM key currently has budget — /api/chat/stream returns a real Claude response, not the expected [ERROR]. Frontend handles the successful stream correctly."
+}
