@@ -1,0 +1,84 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 1 (Organic & Earthy) mixed with Archetype 4 (Swiss Brutalist)",
+  "concept": "The Botanical Canvas. A fusion of highly organic botanical elements (flowers, serif typography, natural palettes) and precise technical UI tools (Figma bounding boxes, monospace annotations, anchor points, grid lines).",
+  "colors": {
+    "background": "#F9F8F6",
+    "foreground": "#1A1A1A",
+    "primary": "#1ABCFE",
+    "secondary": "#E07A5F",
+    "accent_green": "#2C5E3E",
+    "accent_purple": "#A259FF",
+    "border": "#E5E5E5",
+    "surface": "#FFFFFF",
+    "figma_red": "#F24E1E",
+    "figma_blue": "#1ABCFE"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Outfit",
+    "mono_font": "JetBrains Mono",
+    "scale": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl font-light tracking-tight",
+      "h2": "text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight",
+      "h3": "text-2xl sm:text-3xl font-medium",
+      "body": "text-base md:text-lg leading-relaxed",
+      "mono_label": "text-xs font-mono uppercase tracking-[0.2em]"
+    },
+    "instructions": "Use Cormorant Garamond for all primary headings, frequently italicizing specific words to mimic organic, vine-like curves. Use JetBrains Mono for 'UI' elements like tooltips, labels, and technical annotations. Use Outfit for readable paragraphs."
+  },
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "spacing_philosophy": "Generous organic spacing (p-12, gap-16) interrupted by technical, dense grids where needed.",
+    "grid_system": "Bento 'Tetris' grid combined with CSS background grid patterns (`bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:24px_24px]`)."
+  },
+  "components": {
+    "figma_card": {
+      "appearance": "White background, sharp 0px border-radius, 1px solid border. Default border is #E5E5E5. On hover, border turns dashed and Figma Blue (#1ABCFE).",
+      "decorations": "Add absolute positioned 6px x 6px white squares with blue borders at the corners on hover to mimic Figma anchor/resize nodes.",
+      "usage": "Use for Project cards and About section containers."
+    },
+    "annotation_label": {
+      "appearance": "Tiny floating badges attached to sections. JetBrains Mono font, text-xs, bg-white, 1px solid #E5E5E5, or filled with Figma Blue/Red with white text.",
+      "usage": "Place these above or overlapping images/sections, reading like layer names (e.g., '🌱 hero-frame', 'W: 1200 H: 800', 'Auto Layout')."
+    },
+    "buttons": {
+      "primary": "Sharp corners, bg-[#1A1A1A] text-white hover:bg-[#1ABCFE] hover:text-white transition-colors duration-300 font-mono text-sm px-6 py-3 uppercase tracking-wider",
+      "secondary": "Sharp corners, bg-transparent text-[#1A1A1A] border border-[#1A1A1A] hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-colors duration-300 font-mono text-sm px-6 py-3 uppercase tracking-wider"
+    }
+  },
+  "motion_and_interactions": {
+    "global": "MANDATORY: Use `lenis` for smooth scrolling.",
+    "hover_effects": "Hovering an image or card should trigger 'Figma selection' styles (blue outlines, measuring lines appearing, node squares).",
+    "draggable_elements": "Use framer-motion `drag` on certain scattered floating elements in the Hero and Playground.",
+    "cursor": "Implement a custom framer-motion cursor that looks like the Figma 'Move' tool (SVG pointer), perhaps with an attached nametag reading 'Designer'."
+  },
+  "sections_instructions": {
+    "Hero": "Massive 'Cormorant Garamond' heading: 'Cultivating Digital Experiences'. Behind/around the text, scatter draggable `framer-motion` 'frames' containing botanical images or solid green/terracotta colors. Include a background dot grid. Add 'Figma' cursor elements.",
+    "About": "Split layout. Left: A 'Properties Panel' resembling Figma's right sidebar (Design, Prototype, Inspect tabs) but displaying the designer's details, tools, and stats in monospace. Right: A beautifully typeset organic narrative in serif.",
+    "Projects": "Grid of Figma-style component cards. When hovering over a card, reveal red 'measuring guides' showing the dimensions in pixels, and slightly zoom the image. Images should blend UI mockups with botanical elements.",
+    "Skills": "Designed exactly like a Figma 'Layers' panel. A vertical list with Lucide icons (Layers, Image, Type, Hash) representing different skills (e.g., '# UI Design', 'T Typography', '❖ Prototyping').",
+    "Interactive_Playground": "A large canvas area. Include a note saying 'Drag elements around'. Scatter random SVG flowers, sticky notes (yellow rectangles with hand-written font/serif), and UI components. Let the user compose them.",
+    "Contact": "Minimalist. A giant mailto link styled as a 'Component' waiting to be dropped. Use data-testid on the mail link.",
+    "Floating_Chatbot": "Positioned bottom-right. The trigger button should be a sparkling star/sparkle icon in Figma Purple (#A259FF). When opened, the UI should look exactly like Figma's commenting system (rounded corners, white bg, slight drop shadow, input at bottom, simple chat bubbles). Title it 'Design Critique AI'."
+  },
+  "media_assets": {
+    "images": {
+      "botanical_pattern_1": "https://images.unsplash.com/photo-1726409849942-04fe2f65564e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwzfHxib3RhbmljYWwlMjBwYXR0ZXJufGVufDB8fHx8MTc4Mjg4MDgyMnww&ixlib=rb-4.1.0&q=85",
+      "botanical_pattern_2": "https://images.unsplash.com/photo-1726406569564-08086203445b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxib3RhbmljYWwlMjBwYXR0ZXJufGVufDB8fHx8MTc4Mjg4MDgyMnww&ixlib=rb-4.1.0&q=85",
+      "workspace_1": "https://images.pexels.com/photos/4348298/pexels-photo-4348298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "mockup_1": "https://images.unsplash.com/photo-1644792863360-40fa85ea52e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwzfHx3ZWJzaXRlJTIwbW9ja3Vwc3xlbnwwfHx8fDE3ODMwNjAzNzF8MA&ixlib=rb-4.1.0&q=85",
+      "mockup_2": "https://images.unsplash.com/photo-1707836885254-79b6e3d7b18d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwbW9ja3Vwc3xlbnwwfHx8fDE3ODMwNjAzNzF8MA&ixlib=rb-4.1.0&q=85"
+    },
+    "icons_library": "lucide-react (mandatory for the Figma tool UI icons: MousePointer2, Frame, Layers, Type, Hash, Sparkles)"
+  },
+  "testing": {
+    "attributes": "Every interactive element MUST include a 'data-testid' attribute (e.g., data-testid='hero-cta-button', data-testid='chatbot-trigger', data-testid='project-card-1')."
+  },
+  "forbidden_elements": [
+    "No generic purple gradients (except the strict Figma #A259FF used only for the AI icon)",
+    "No Inter, Roboto, or standard sans-serifs for headings. Use Cormorant Garamond.",
+    "No centered card grids. Use bento or asymmetrical layouts with 'measuring lines'.",
+    "No rounded 'Apple/Vercel' style cards. Cards must be sharp (rounded-none) to mimic artboards."
+  ]
+}
