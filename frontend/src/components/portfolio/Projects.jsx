@@ -66,7 +66,6 @@ function Card({ cs, index }) {
               {cs.tags.slice(0, 3).map((t) => (
                 <span key={t} className="tag-badge">{t}</span>
               ))}
-              <span className="mono-label">{cs.year}</span>
             </div>
             <h3 className="font-serif text-2xl md:text-3xl text-[#1A1A1A]">{cs.title}</h3>
             <p className="text-sm md:text-[15px] text-[#1A1A1A]/70 mt-1 line-clamp-2">{cs.tagline}</p>

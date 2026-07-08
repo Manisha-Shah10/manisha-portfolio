@@ -7,8 +7,8 @@ const GROUPS = [
     icon: Frame,
     items: [
       { icon: Component, label: "Product design", meta: "Sr", pct: 96 },
-      { icon: Layers, label: "Design systems", meta: "Sr", pct: 94 },
-      { icon: Type, label: "Typography", meta: "Mid", pct: 88 },
+      { icon: Layers, label: "UI/UX Design", meta: "Sr", pct: 96 },
+      { icon: Layers, label: "Design systems", meta: "Sr", pct: 80 },
       { icon: PenTool, label: "Brand identity", meta: "Mid", pct: 82 },
     ],
   },
@@ -17,9 +17,10 @@ const GROUPS = [
     icon: Wand2,
     items: [
       { icon: Users, label: "User research", meta: "Mid", pct: 78 },
+      { icon: Ruler, label: "Wireframe", meta: "Sr", pct: 96 },
       { icon: Sparkles, label: "Prototyping", meta: "Sr", pct: 95 },
-      { icon: Ruler, label: "Information arch.", meta: "Sr", pct: 90 },
-      { icon: Hash, label: "Motion & interaction", meta: "Mid", pct: 84 },
+      { icon: Hash, label: "Information arch.", meta: "Sr", pct: 90 },
+      { icon: Hash, label: "Motion & interaction", meta: "Sr", pct: 90 },
     ],
   },
   {
@@ -28,8 +29,9 @@ const GROUPS = [
     items: [
       { icon: Flower2, label: "Figma / FigJam", meta: "Sr", pct: 98 },
       { icon: Sparkles, label: "Framer", meta: "Mid", pct: 82 },
-      { icon: PenTool, label: "Illustrator", meta: "Mid", pct: 74 },
-      { icon: Hash, label: "HTML / CSS / Tailwind", meta: "Mid", pct: 78 },
+      { icon: Hash, label: "HTML / CSS / Tailwind", meta: "Basic", pct: 45 },
+      { icon: Type, label: "Notion", meta: "Mid", pct: 78 },
+      { icon: PenTool, label: "Canva", meta: "Sr", pct: 95 },
     ],
   },
 ];
@@ -88,7 +90,7 @@ export default function Skills() {
                 <span className="mono-label text-[#1A1A1A]">Layers</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="tag-badge">12 items</span>
+                <span className="tag-badge">14 items</span>
                 <span className="tag-badge blue">v2.4</span>
               </div>
             </div>
