@@ -106,7 +106,7 @@ export default function Chatbot() {
         onClick={() => setOpen((o) => !o)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.96 }}
-        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[70] flex items-center gap-2 px-4 py-3 shadow-[0_10px_28px_rgba(162,89,255,0.35)]"
+        className="fixed bottom-16 right-4 md:bottom-6 md:right-52 z-[70] flex items-center gap-2 px-4 py-3 shadow-[0_10px_28px_rgba(162,89,255,0.35)]"
         style={{ background: "#A259FF", color: "#fff", borderRadius: 0 }}
         aria-label="Open Design Critique AI"
       >
@@ -123,7 +123,7 @@ export default function Chatbot() {
             exit={{ opacity: 0, y: 20, scale: 0.98 }}
             transition={{ duration: 0.25 }}
             className="fixed z-[80] bg-white border border-[#E5E5E5] shadow-[0_30px_60px_rgba(0,0,0,0.18)]
-                       bottom-20 right-4 md:right-8 md:bottom-24
+                       bottom-32 right-4 md:right-8 md:bottom-24
                        w-[calc(100vw-2rem)] md:w-[380px] h-[560px] max-h-[80vh] flex flex-col"
             data-testid="chatbot-panel"
           >

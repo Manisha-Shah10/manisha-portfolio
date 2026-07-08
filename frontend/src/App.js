@@ -1,6 +1,6 @@
 import "@/App.css";
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "lenis";
 import CustomCursor from "@/components/portfolio/CustomCursor";
 import Nav from "@/components/portfolio/Nav";
@@ -12,9 +12,10 @@ import Playground from "@/components/portfolio/Playground";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
 import Chatbot from "@/components/portfolio/Chatbot";
+import CaseStudy from "@/components/portfolio/CaseStudy";
 import { Toaster } from "sonner";
 
-function Portfolio() {
+function useLenis() {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.15,
@@ -28,10 +29,25 @@ function Portfolio() {
     const id = requestAnimationFrame(raf);
     return () => { cancelAnimationFrame(id); lenis.destroy(); };
   }, []);
+}
 
+function ScrollToHash() {
+  const { hash, pathname } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
+    } else if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, [hash, pathname]);
+  return null;
+}
+
+function Portfolio() {
+  useLenis();
   return (
     <div className="App relative" data-testid="portfolio-root">
-      <CustomCursor />
       <Nav />
       <main>
         <Hero />
@@ -42,18 +58,26 @@ function Portfolio() {
         <Contact />
       </main>
       <Footer />
-      <Chatbot />
-      <Toaster position="bottom-left" />
     </div>
   );
+}
+
+function CasePage() {
+  useLenis();
+  return <CaseStudy />;
 }
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToHash />
+      <CustomCursor />
       <Routes>
         <Route path="/" element={<Portfolio />} />
+        <Route path="/case/:slug" element={<CasePage />} />
       </Routes>
+      <Chatbot />
+      <Toaster position="bottom-left" />
     </BrowserRouter>
   );
 }

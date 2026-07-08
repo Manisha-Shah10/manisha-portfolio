@@ -36,7 +36,7 @@ export default function Nav() {
             <circle cx="12" cy="20" r="3.2" fill="#A259FF" />
             <circle cx="4" cy="12" r="3.2" fill="#F24E1E" />
           </svg>
-          <span className="font-serif italic text-lg tracking-tight">Botanical<span className="not-italic font-normal text-[#1A1A1A]">/</span>Canvas</span>
+          <span className="font-serif italic text-lg tracking-tight">Manisha<span className="not-italic font-normal text-[#1A1A1A]">/</span>Shah</span>
         </a>
         <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (

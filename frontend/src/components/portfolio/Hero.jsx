@@ -151,7 +151,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-10 md:mt-24 flex flex-wrap items-center gap-4 md:gap-8 border-t border-[#E5E5E5] pt-6">
         <span className="mono-label">available · Q1 2026</span>
         <span className="w-1 h-1 bg-[#1A1A1A] rounded-full" />
-        <span className="mono-label">Berlin · Remote</span>
+        <span className="mono-label">India · Remote</span>
         <span className="w-1 h-1 bg-[#1A1A1A] rounded-full" />
         <span className="mono-label">design systems · product · brand</span>
       </div>

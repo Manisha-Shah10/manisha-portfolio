@@ -50,10 +50,10 @@ export default function About() {
                 <Sliders className="w-3.5 h-3.5 text-[#1A1A1A]" />
                 <h4 className="mono-label text-[#1A1A1A]">Design</h4>
               </div>
-              <PropertyRow label="Name" value="Your Name" tone="accent" />
-              <PropertyRow label="Role" value="Senior UI/UX Designer" />
-              <PropertyRow label="Years" value="6.4" />
-              <PropertyRow label="Base" value="Berlin, DE" />
+              <PropertyRow label="Name" value="Manisha Shah" tone="accent" />
+              <PropertyRow label="Role" value="UI/UX Designer" />
+              <PropertyRow label="Years" value="5+" />
+              <PropertyRow label="Base" value="India" />
               <PropertyRow label="Stack" value="Figma · Framer" />
 
               <div className="mt-6 flex items-center gap-2 mb-3">
@@ -107,7 +107,7 @@ export default function About() {
 
           <div className="mt-8 space-y-6 text-[15px] md:text-lg text-[#1A1A1A]/80 leading-relaxed max-w-xl">
             <p>
-              I&apos;ve spent the last six seasons pruning products for early-stage startups and
+              I&apos;ve spent the last five+ seasons pruning products for early-stage startups and
               cultivating design systems that scale without wilting. I care about the
               microcopy, the empty state, and the exact number of pixels a chip should breathe.
             </p>
@@ -123,12 +123,10 @@ export default function About() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-lg">
+          <div className="mt-10 grid grid-cols-2 gap-6 max-w-md">
             {[
-              { n: "48+", l: "Products shipped" },
-              { n: "12", l: "Design systems" },
-              { n: "6.4y", l: "Years growing" },
-              { n: "3", l: "Cups today" },
+              { n: "20+", l: "Products shipped" },
+              { n: "5+", l: "Years growing" },
             ].map((s, i) => (
               <div key={i} className="border-l border-[#1A1A1A] pl-3">
                 <div className="font-serif text-3xl md:text-4xl text-[#1A1A1A]">{s.n}</div>
